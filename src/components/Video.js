@@ -547,7 +547,6 @@ export default class Video extends Component {
         playsInline={playsInline}
         autoPlay={autoPlay}
         poster={poster}
-        src={src}
         onLoadStart={this.handleLoadStart}
         onWaiting={this.handleWaiting}
         onCanPlay={this.handleCanPlay}
@@ -572,6 +571,7 @@ export default class Video extends Component {
         onVolumeChange={this.handleVolumeChange}
         tabIndex="-1"
       >
+      <source crossOrigin={crossOrigin} src={src} />
         {this.renderChildren()}
       </video>
     );
